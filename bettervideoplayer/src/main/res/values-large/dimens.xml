@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="bvp_content_inset_half">12dp</dimen>
+
+    <dimen name="bvp_text_size_medium">17sp</dimen>
+
+    <dimen name="bvp_button_size">56dp</dimen>
+
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_go_home"
+            android:checked="true"
+            android:icon="@drawable/ic_homer"
+            android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/menu_go_latest"
+            android:checked="false"
+            android:icon="@drawable/ic_d_latest"
+            android:title="@string/menu_latest"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/menu_go_category"
+            android:checked="false"
+            android:icon="@drawable/ic_d_category"
+            android:title="@string/menu_category"
+            android:visible="false"/>
+
+         <item
+            android:id="@+id/menu_go_favourite"
+            android:checked="false"
+            android:icon="@drawable/ic_d_favorite"
+            android:title="@string/menu_favorite"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/menu_go_profile"
+            android:checked="false"
+            android:icon="@drawable/ic_account_circle"
+            android:title="@string/menu_profile" />
+
+        <item
+            android:id="@+id/menu_go_subcription"
+            android:checked="true"
+            android:icon="@drawable/ic_premium"
+            android:title="@string/subcription" />
+
+        <item
+            android:id="@+id/menu_go_giftvoucher"
+            android:checked="true"
+            android:icon="@drawable/ic_giftvoucher"
+            android:title="@string/giftvoucher" />
+
+        <item
+            android:id="@+id/menu_go_earn"
+            android:checked="true"
+            android:icon="@drawable/ic_earn"
+            android:title="@string/referandearn" />
+
+        <item
+            android:id="@+id/menu_go_setting"
+            android:checked="false"
+            android:icon="@drawable/ic_d_setting"
+            android:title="@string/menu_setting"
+            android:visible="false"/>
+
+        <item
+            android:id="@+id/menu_go_privacy"
+            android:checkable="false"
+            android:icon="@drawable/ic_privacy_policy"
+            android:title="@string/menu_privacy" />
+
+        <item
+            android:id="@+id/menu_go_rate"
+            android:checkable="false"
+            android:icon="@drawable/ic_star"
+            android:title="@string/menu_rate" />
+
+        <item
+            android:id="@+id/menu_go_share"
+            android:checkable="false"
+            android:icon="@drawable/ic_share"
+            android:title="@string/menu_share" />
+
+         <item
+            android:id="@+id/menu_go_login"
+            android:checkable="false"
+            android:icon="@drawable/ic_d_login"
+            android:title="@string/menu_login" />
+
+        <item
+            android:id="@+id/menu_go_logout"
+            android:checkable="false"
+            android:icon="@drawable/ic_logout"
+            android:title="@string/menu_logout" />
+
+
+
+    </group>
+</menu>

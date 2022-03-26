@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:facebook="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:filterTouchesWhenObscured="true">
+
+    <androidx.percentlayout.widget.PercentRelativeLayout
+        android:id="@+id/login_landing"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/landing_screen_background"
+        android:fitsSystemWindows="true">
+
+        <View
+            android:id="@+id/dummy1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_heightPercent="8.7%" />
+
+        <ImageView
+            android:id="@+id/z5LoginLogoImageView"
+            android:layout_width="@dimen/landing_zee5logo_width"
+            android:layout_height="@dimen/landing_zee5logo_height"
+            android:layout_below="@+id/dummy1"
+            android:src="@mipmap/app_icon"
+            android:layout_centerHorizontal="true"
+            android:foregroundGravity="center" />
+
+        <View
+            android:id="@+id/dummy2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/z5LoginLogoImageView"
+            android:layout_alignParentStart="true"
+            app:layout_heightPercent="3%" />
+
+        <TextView
+            android:id="@+id/to_subscribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dummy2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="15dp"
+            android:text="@string/to_subscribe_please_login"
+            android:textAlignment="center"
+            android:textColor="@color/buy_subscription_heading_color"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/ConnectwithSocial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/to_subscribe"
+            android:layout_centerHorizontal="true"
+            android:text="@string/connect_social"
+            android:textAlignment="center"
+            android:textColor="@color/landing_screen_button_text"
+            android:textSize="@dimen/landing_connect_with_social_text_size"
+            android:textStyle="normal" />
+
+        <View
+            android:id="@+id/dummy3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/ConnectwithSocial"
+            app:layout_heightPercent="2%" />
+
+        <RelativeLayout
+            android:id="@+id/icons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ConnectwithSocial"
+            android:layout_marginTop="@dimen/landing_image_layout_margin_top"
+            android:gravity="center">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <com.facebook.login.widget.LoginButton
+                    android:visibility="gone"
+                    facebook:com_facebook_login_text="Login with facebook"
+                    android:id="@+id/sign_in_button_facebook"
+                    android:layout_width="@dimen/landing_image_layout_image_width"
+                    android:layout_height="@dimen/landing_image_layout_image_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:textSize="15sp" >
+                </com.facebook.login.widget.LoginButton>
+
+                <ImageView
+                    android:id="@+id/facebook"
+                    android:layout_width="@dimen/landing_image_layout_image_width"
+                    android:layout_height="@dimen/landing_image_layout_image_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/landing_image_layout_image_margin_right"
+                    android:layout_weight="1.2"
+                    android:src="@drawable/facebook"
+                    android:clickable="true" />
+
+                <com.google.android.gms.common.SignInButton
+                    android:id="@+id/sign_in_button"
+                    android:layout_width="@dimen/landing_image_layout_image_width"
+                    android:layout_height="@dimen/landing_image_layout_image_height"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="0dp"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/white"
+                    android:visibility="visible" >
+
+                    <ImageView
+                        android:id="@+id/google_sign_in"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_vertical"
+                        android:clickable="true"/>
+                </com.google.android.gms.common.SignInButton>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/dummy4"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/icons"
+            app:layout_heightPercent="6%" />
+
+        <RelativeLayout
+            android:id="@+id/or"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dummy4"
+            android:paddingStart="@dimen/landing_or_layout_padding_left">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <View
+                    android:id="@+id/line1"
+                    android:layout_width="@dimen/landing_or_layout_line_width"
+                    android:layout_height="@dimen/landing_or_layout_line_height"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/landing_or_layout_line_margin_top"
+                    android:background="@color/landing_screen_OR" />
+
+                <TextView
+                    android:id="@+id/string_or"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/line1"
+                    android:paddingStart="@dimen/landing_or_text_layout_padding_left"
+                    android:paddingEnd="@dimen/landing_or_text_layout_padding_right"
+                    android:text="@string/orletter"
+                    android:textColor="@color/landing_screen_OR"
+                    android:textSize="@dimen/landing_or_layout_text_size" />
+
+                <View
+                    android:id="@+id/line2"
+                    android:layout_width="@dimen/landing_or_layout_line_width"
+                    android:layout_height="@dimen/landing_or_layout_line_height"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/landing_or_layout_line_margin_top"
+                    android:layout_toEndOf="@+id/string_or"
+                    android:background="@color/landing_screen_OR" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/dummy5"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/or"
+            app:layout_heightPercent="6%" />
+
+        <View
+            android:id="@+id/dummy10"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/dummy5"
+            android:visibility="gone"
+            app:layout_heightPercent="4.5%" />
+
+        <RelativeLayout
+            android:id="@+id/login_register_mobile"
+            android:layout_width="@dimen/landing_button_layout_width"
+            android:layout_height="@dimen/landing_button_layout_height"
+            android:layout_below="@+id/dummy10"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/textinputborder">
+
+            <ImageView
+                android:id="@+id/login_mobile_button_image"
+                android:layout_width="@dimen/landing_button_mobile_image_width"
+                android:layout_height="@dimen/landing_button_mobile_image_height"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/landing_button_image_margin_left"
+                android:layout_marginEnd="@dimen/landing_button_mobile_image_margin_right"
+                android:src="@drawable/ic_mobile"/>
+
+            <TextView
+                android:id="@+id/login_mobile_button_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/login_mobile_button_image"
+                android:gravity="center_vertical"
+                android:paddingEnd="20dp"
+                android:text="@string/register_mobile"
+                android:textColor="@color/landing_screen_button_text"
+                android:textSize="@dimen/landing_button_layout_text_size" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/dummy6"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/login_register_mobile"
+            app:layout_heightPercent="3%" />
+
+        <RelativeLayout
+            android:id="@+id/login_register_email"
+            android:layout_width="@dimen/landing_button_layout_width"
+            android:layout_height="@dimen/landing_button_layout_height"
+            android:layout_below="@+id/dummy6"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/landing_button_layout_padding_left"
+            android:background="@drawable/textinputborder">
+
+            <ImageView
+                android:id="@+id/login_email_button_image"
+                android:layout_width="@dimen/landing_button_email_image_width"
+                android:layout_height="@dimen/landing_button_email_image_height"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/landing_button_image_margin_left"
+                android:layout_marginEnd="@dimen/landing_button_email_image_margin_right"
+                app:srcCompat="@drawable/ic_mailn"/>
+
+            <TextView
+                android:id="@+id/login_email_button_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toEndOf="@+id/login_email_button_image"
+                android:gravity="center_vertical"
+                android:paddingEnd="20dp"
+                android:text="@string/register_email"
+                android:textColor="@color/landing_screen_button_text"
+                android:textSize="@dimen/landing_button_layout_text_size" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/dummy11"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/login_register_email"
+            android:visibility="gone"
+            app:layout_heightPercent="4.5%" />
+
+        <View
+            android:id="@+id/dummy7"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/dummy11"
+            app:layout_heightPercent="5.5%" />
+
+        <RelativeLayout
+            android:id="@+id/Alreadyhaveanlayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dummy7"
+            android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/already_have_an_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/already_account"
+                    android:textColor="@color/continue_watching_button_text_focused_color"
+                    android:textSize="@dimen/landing_already_layout_text_size" />
+
+                <TextView
+                    android:id="@+id/login_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="-8dp"
+                    android:clickable="true"
+                    android:padding="@dimen/generic_touch_padding"
+                    android:text="@string/login_small"
+                    android:textColor="@color/landing_screen_login"
+                    android:textSize="@dimen/landing_login_layout_text_size" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/dummy8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/Alreadyhaveanlayout"
+            app:layout_heightPercent="5%" />
+
+        <TextView
+            android:id="@+id/skip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dummy8"
+            android:layout_centerHorizontal="true"
+            android:clickable="true"
+            android:padding="@dimen/landing_skip_layout_padding"
+            android:text="@string/skip_caps"
+            android:textColor="@color/landing_screen_screen_text"
+            android:textSize="@dimen/landing_skip_layout_text_size" />
+
+        <TextView
+            android:id="@+id/terms_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:text="@string/privacy_info"
+            android:textAlignment="center"
+            android:textColor="@color/landing_screen_screen_text"
+            android:textSize="@dimen/landing_bycontinue_layout_text_size" />
+
+        <include layout="@layout/mobile_progress_bar" />
+    </androidx.percentlayout.widget.PercentRelativeLayout>
+</FrameLayout>

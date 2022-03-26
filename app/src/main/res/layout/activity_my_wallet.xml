@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MyWalletActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar_main"
+            layout="@layout/row_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar_main">
+
+            <LinearLayout
+                android:id="@+id/lay_main"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:id="@+id/wallet"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/walletImage"
+                            android:layout_width="60.0dip"
+                            android:layout_height="60.0dip"
+                            android:contentDescription="TODO"
+                            app:srcCompat="@drawable/ic_walletimg"
+                            tools:ignore="ContentDescription" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20.0dip"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/walletBalance"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="₹ 55"
+                                android:textColor="@color/darkBlue"
+                                android:textSize="45.0sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/mobilenumber"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@+id/wallet"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:fontFamily="@font/muli_bold"
+                            android:paddingLeft="25dp"
+                            android:text="Enter Your Mobile Number"
+                            android:textColor="@color/gray"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                            android:textSize="15sp"
+                            android:visibility="gone"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingLeft="25dp"
+                            android:paddingRight="25dp">
+
+                            <com.rilixtech.CountryCodePicker
+                                android:id="@+id/ccp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="18dp"
+                                app:ccp_defaultNameCode="IN"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/numbered"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/muli_bold"
+                                    android:hint="Mobile Number"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="number"
+                                    android:drawableLeft="@drawable/ic_phone_black_24dp"
+                                    android:maxLength="15"
+                                    android:paddingLeft="7.0dip"
+                                    android:textSize="17.0sp"
+                                    android:enabled="true"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/radioGroup1ly"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="25dp"
+                        android:layout_below="@+id/mobilenumber"
+                        android:layout_centerHorizontal="true"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:fontFamily="@font/muli_bold"
+                            android:paddingLeft="25dp"
+                            android:text="Select Payment Mode:"
+                            android:textColor="@color/gray"
+                            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                            android:textSize="15sp" />
+
+                        <RadioGroup
+                            android:id="@+id/radioGroup1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginLeft="18dp">
+
+                            <LinearLayout
+                                android:id="@+id/paytmln"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="0dp"
+                                android:orientation="horizontal" >
+
+                                <RadioButton
+                                    android:id="@+id/radio0"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/colorPrimaryDark"
+                                    android:layout_gravity="center_vertical" />
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/paytm"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="180dp"
+                                    android:layout_margin="5dp"
+                                    android:elevation="10dp"
+                                    app:cardCornerRadius="15dp">
+
+                                    <ImageView
+                                        android:id="@+id/roundedImageView"
+                                        android:layout_width="80dp"
+                                        android:layout_height="45dp"
+                                        android:background="@color/white"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/paytm_logo"
+                                        android:layout_gravity="center_horizontal"/>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/googleln"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="0dp"
+                                android:orientation="horizontal" >
+
+                                <RadioButton
+                                    android:id="@+id/radio5"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/colorPrimaryDark"
+                                    android:layout_gravity="center_vertical" />
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/google"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="180dp"
+                                    android:layout_margin="5dp"
+                                    android:elevation="10dp"
+                                    app:cardCornerRadius="15dp">
+
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="45dp"
+                                        android:background="@color/white"
+                                        android:scaleType="centerInside"
+                                        app:srcCompat="@drawable/googlepay_button_content"
+                                        android:layout_gravity="center_horizontal"/>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/paypalln"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="0dp"
+                                android:orientation="horizontal" >
+
+                                <RadioButton
+                                    android:id="@+id/radio01"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/colorPrimaryDark"
+                                    android:layout_gravity="center_vertical" />
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/paypal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="180dp"
+                                    android:layout_margin="5dp"
+                                    android:elevation="10dp"
+                                    app:cardCornerRadius="15dp">
+
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="45dp"
+                                        android:background="@color/white"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/paypal_logo"
+                                        android:layout_gravity="center_horizontal"/>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/instamojoln"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="0dp"
+                                android:orientation="horizontal" >
+
+                                <RadioButton
+                                    android:id="@+id/radio02"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/colorPrimaryDark"
+                                    android:layout_gravity="center_vertical" />
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/instamojo"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="180dp"
+                                    android:layout_margin="5dp"
+                                    android:elevation="10dp"
+                                    app:cardCornerRadius="15dp">
+
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="45dp"
+                                        android:background="@color/white"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/instamojo_logo"
+                                        android:layout_gravity="center_horizontal"/>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/razorpayln"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="0dp"
+                                android:orientation="horizontal" >
+
+                                <RadioButton
+                                    android:id="@+id/radio03"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/colorPrimaryDark"
+                                    android:layout_gravity="center_vertical" />
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/razorpay"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="180dp"
+                                    android:layout_margin="5dp"
+                                    android:elevation="10dp"
+                                    app:cardCornerRadius="15dp">
+
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="45dp"
+                                        android:background="@color/white"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/razorpay_logo"
+                                        android:layout_gravity="center_horizontal"/>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/paykunln"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="0dp"
+                                android:orientation="horizontal" >
+
+                                <RadioButton
+                                    android:id="@+id/radio7"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/colorPrimaryDark"
+                                    android:layout_gravity="center_vertical" />
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/paykun"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="180dp"
+                                    android:layout_margin="5dp"
+                                    android:elevation="10dp"
+                                    app:cardCornerRadius="15dp">
+
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="45dp"
+                                        android:background="@color/white"
+                                        android:scaleType="centerInside"
+                                        app:srcCompat="@drawable/paykun_logo"
+                                        android:layout_gravity="center_horizontal"/>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/traknpayln"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="0dp"
+                                android:orientation="horizontal" >
+
+                                <RadioButton
+                                    android:id="@+id/radio11"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/colorPrimaryDark"
+                                    android:layout_gravity="center_vertical" />
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/traknpay"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="180dp"
+                                    android:layout_margin="5dp"
+                                    android:elevation="10dp"
+                                    app:cardCornerRadius="15dp">
+
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="45dp"
+                                        android:background="@color/white"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/traknpay_logo"
+                                        android:layout_gravity="center_horizontal"/>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/flutterwaveln"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="0dp"
+                                android:orientation="horizontal" >
+
+                                <RadioButton
+                                    android:id="@+id/radio12"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:buttonTint="@color/colorPrimaryDark"
+                                    android:layout_gravity="center_vertical" />
+
+                                <androidx.cardview.widget.CardView
+                                    android:id="@+id/flutterwave"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:minWidth="180dp"
+                                    android:layout_margin="5dp"
+                                    android:elevation="10dp"
+                                    app:cardCornerRadius="15dp">
+
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="45dp"
+                                        android:background="@color/white"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/flutterwave_logo"
+                                        android:layout_gravity="center_horizontal"/>
+                                </androidx.cardview.widget.CardView>
+                            </LinearLayout>
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/errorMessage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8.0dip"
+                        android:layout_below="@+id/radioGroup1ly"
+                        android:fontFamily="@font/muli"
+                        android:paddingLeft="5.0dip"
+                        android:text="Enter Mobile Number"
+                        android:textColor="#ffff0000"
+                        android:textSize="17.0sp"
+                        android:textStyle="bold"
+                        android:visibility="gone" />
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:layout_below="@+id/errorMessage"
+                        android:layout_centerHorizontal="true"
+                        android:elevation="10dp"
+                        app:cardCornerRadius="15dp">
+
+                        <Button
+                            android:id="@+id/pay"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@color/jiosavanblue"
+                            android:fontFamily="@font/muli_extrabold"
+                            android:text="Proceed To Pay"
+                            android:textColor="@color/white"
+                            android:textSize="18.0sp" />
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "578894425970",
+    "firebase_url": "https://live-tv-movies-new-default-rtdb.firebaseio.com",
+    "project_id": "live-tv-movies-new",
+    "storage_bucket": "live-tv-movies-new.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578894425970:android:f3e784d0fc310bacd0f7eb",
+        "android_client_info": {
+          "package_name": "com.hdmovies.livetvchannels"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "578894425970-v1kk7f727d6cpodm4v287jr4359t5pm2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hdmovies.livetvchannels",
+            "certificate_hash": "25709ac5aff6ef87dae0a4706c5fe15d6b4860c9"
+          }
+        },
+        {
+          "client_id": "578894425970-p8e913klg8emivpk6i2aai6df15200l8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3173nlFHtMeEf5PVheV91mK4MzlcfAGI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "578894425970-p8e913klg8emivpk6i2aai6df15200l8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

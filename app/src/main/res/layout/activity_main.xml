@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/appbackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbar_main"
+            layout="@layout/row_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true" />
+
+        <FrameLayout
+            android:id="@+id/Container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottom_view"
+            android:layout_below="@+id/toolbar_main" />
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:id="@+id/bottom_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_above="@+id/ad_view"
+            android:layout_alignWithParentIfMissing="true"
+            android:orientation="vertical">
+
+            <com.gauravk.bubblenavigation.BubbleNavigationConstraintView
+                android:id="@+id/top_navigation_constraint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/dark_gray"
+                android:elevation="0dp"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                app:bnc_mode="inside"
+                app:hideOnScroll="true"
+
+                >
+                <com.gauravk.bubblenavigation.BubbleToggleView
+                    android:id="@+id/l_item_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:bt_icon="@drawable/ic_homer"
+                    app:bt_iconHeight="15dp"
+                    app:bt_iconWidth="15dp"
+                    app:bt_colorInactive="@color/yellow"
+                    app:bt_colorActive="@color/yellow"
+                    app:bt_shape="@drawable/bg_background_yellow"
+                    app:bt_title="@string/menu_home" />
+
+                <com.gauravk.bubblenavigation.BubbleToggleView
+                    android:id="@+id/l_item_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:bt_iconHeight="15dp"
+                    app:bt_iconWidth="15dp"
+
+                    app:bt_colorActive="@color/red"
+                    app:bt_colorInactive="@color/red"
+                    app:bt_shape="@drawable/bg_background_red"
+                    app:bt_icon="@drawable/ic_category"
+                    app:bt_title="@string/menu_category" />
+
+                <com.gauravk.bubblenavigation.BubbleToggleView
+                    android:id="@+id/l_item_profile_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:bt_iconHeight="15dp"
+                    app:bt_iconWidth="15dp"
+                    app:bt_colorInactive="@color/green"
+                    app:bt_colorActive="@color/green"
+                    app:bt_shape="@drawable/bg_background_green"
+                    app:bt_icon="@drawable/ic_film"
+                    app:bt_title="@string/all_video" />
+                <com.gauravk.bubblenavigation.BubbleToggleView
+                    android:id="@+id/l_item_profileist"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:bt_iconHeight="15dp"
+                    app:bt_iconWidth="15dp"
+                    app:bt_colorInactive="@color/pruple"
+                    app:bt_colorActive="@color/pruple"
+                    app:bt_shape="@drawable/bg_background_pruple"
+                    app:bt_icon="@drawable/ic_hearts"
+                    app:bt_title="@string/menu_favorite" />
+
+                <com.gauravk.bubblenavigation.BubbleToggleView
+                    android:id="@+id/l_ite_profi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:bt_iconHeight="20dp"
+                    app:bt_iconWidth="20dp"
+                    app:bt_colorInactive="@color/orange"
+                    app:bt_colorActive="@color/orange"
+                    app:bt_shape="@drawable/bg_background_orange"
+                    app:bt_icon="@drawable/ic_file_download"
+                    app:bt_title="@string/menu_download" />
+            </com.gauravk.bubblenavigation.BubbleNavigationConstraintView>
+
+<!--            <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--                android:id="@+id/bottom_navigation"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="bottom"-->
+<!--                app:elevation="13dp"-->
+<!--                app:itemBackground="@color/black"-->
+<!--                app:theme="@style/NavigationDrawerStyle"-->
+<!--                app:itemIconTint="@color/bottom_state_list"-->
+<!--                app:itemTextColor="@color/bottom_state_list"-->
+<!--                app:menu="@menu/bottom_navigation" />-->
+
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+        <LinearLayout
+            android:id="@+id/ad_view"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="@color/navigation_bg"
+        android:fitsSystemWindows="true"
+        android:scrollbars="none"
+        app:headerLayout="@layout/left_nav_header"
+        app:itemBackground="@drawable/nav_item_bg"
+        app:itemIconTint="@color/state_list"
+        app:itemTextColor="@color/state_list"
+        app:menu="@menu/menu_drawer">
+
+    </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

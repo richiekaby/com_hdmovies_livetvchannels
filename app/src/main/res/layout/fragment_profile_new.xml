@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/profile_background">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/profilemain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/profile_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/save_changes_userprofile">
+
+            <ScrollView
+                android:id="@+id/lay_scroll"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:fillViewport="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/profile_background"
+                        android:orientation="vertical">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/editprofile_image_border"
+                                android:layout_width="@dimen/userprofile_image_size"
+                                android:layout_height="@dimen/userprofile_image_size"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/userprofile_border_image_marginTop"
+                                android:scaleType="fitXY" />
+
+                            <ImageView
+                                android:id="@+id/editprofile_profile_pic"
+                                android:layout_width="@dimen/slide_menu_profile_picture_length"
+                                android:layout_height="@dimen/slide_menu_profile_picture_length"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="@dimen/userprofile_image_marginTop"
+                                app:srcCompat="@drawable/ic_account_circle"/>
+                        </FrameLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textinput_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/textinput_name_marginLeft"
+                            android:layout_marginTop="@dimen/textinput_name_marginTop"
+                            android:layout_marginEnd="@dimen/textinput_name_marginRight"
+                            android:layout_marginBottom="@dimen/textinput_name_marginBottom"
+                            android:textColor="@color/profile_grey"
+                            android:theme="@style/Register_email_hint">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/name_text_userprofile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:hint="@string/name"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:maxLength="15"
+                                android:maxLines="1"
+                                android:paddingBottom="@dimen/mobile_extra_line_spacing"
+                                android:textColor="@color/profile_white"
+                                android:textSize="@dimen/login_registration_mobile_phone_text_size"
+                                android:theme="@style/Register_email_hint" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/input_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/login_registration_mobile_phone_margin_left"
+                            android:layout_marginEnd="@dimen/login_registration_mobile_phone_margin_right"
+                            android:theme="@style/Register_email_hint">
+
+                            <TextView
+                                android:id="@+id/email_description"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/contact_us_hint_margin_top"
+                                android:paddingStart="@dimen/contact_us_hint_padding_left"
+                                android:text="@string/email_id"
+                                android:textColor="@color/contact_us_default_text"
+                                android:textSize="@dimen/contact_us_country_text_size"
+                                android:theme="@style/Register_email_hint"
+                                android:visibility="gone"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/textinput_email"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/profile_grey"
+                                android:theme="@style/Register_email_hint">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/input_email_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="textEmailAddress"
+                                    android:isScrollContainer="true"
+                                    android:paddingStart="@dimen/contact_us_hint_padding_left"
+                                    android:paddingBottom="@dimen/mobile_extra_line_spacing"
+                                    android:hint="@string/email_id"
+                                    android:textColor="@color/profile_white"
+                                    android:textSize="@dimen/login_registration_mobile_phone_text_size" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/email_incorrect"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textinput_email"
+                                android:layout_marginEnd="@dimen/login_registration_mobile_incorrect_margin_top"
+                                android:gravity="end"
+                                android:text="@string/incorrect_email_error"
+                                android:textColor="@color/mobile_screen_background"
+                                android:textSize="@dimen/login_registration_mobile_minimum_text_text_size"
+                                android:visibility="invisible" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/input_phone"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/login_registration_mobile_phone_margin_left"
+                            android:layout_marginEnd="@dimen/login_registration_mobile_phone_margin_right"
+                            android:layout_marginBottom="@dimen/edit_profile_mobile_marginBtm"
+                            android:theme="@style/Register_email_hint">
+
+                            <TextView
+                                android:id="@+id/description"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/contact_us_hint_margin_top"
+                                android:paddingStart="@dimen/contact_us_hint_padding_left"
+                                android:paddingBottom="@dimen/country_extra_line_spacing"
+                                android:text="@string/mobile_num"
+                                android:textColor="@color/contact_us_default_text"
+                                android:textSize="@dimen/contact_us_country_text_size"
+                                android:theme="@style/Register_email_hint"
+                                android:visibility="gone"/>
+
+                            <com.rilixtech.CountryCodePicker
+                                android:id="@+id/ccp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="18dp"
+                                app:ccp_defaultNameCode="IN"
+                                app:ccp_textColor="@color/white"
+                                app:ccp_textSize="15sp"
+                                app:ccp_backgroundColor="@android:color/transparent"/>
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/textinput_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/ccp"
+                                android:textColor="@color/profile_grey"
+                                android:theme="@style/Register_email_hint">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/input_phone_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:digits="0123456789"
+                                    android:imeOptions="actionNext"
+                                    android:inputType="phone"
+                                    android:isScrollContainer="true"
+                                    android:maxLength="20"
+                                    android:paddingStart="@dimen/contact_us_hint_padding_left"
+                                    android:paddingBottom="@dimen/mobile_extra_line_spacing"
+                                    android:hint="@string/mobile_num"
+                                    android:textColor="@color/profile_white"
+                                    android:textSize="@dimen/login_registration_mobile_phone_text_size" />
+                            </com.google.android.material.textfield.TextInputLayout>
+
+                            <TextView
+                                android:id="@+id/country_code_mbl_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/textinput_phone"
+                                android:layout_alignBottom="@+id/textinput_phone"
+                                android:layout_alignParentStart="true"
+                                android:paddingStart="@dimen/country_code_textview_padding_left"
+                                android:paddingEnd="0dp"
+                                android:textColor="@color/registration_login_default_text"
+                                android:visibility="gone"/>
+
+                            <TextView
+                                android:id="@+id/incorrect"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/textinput_phone"
+                                android:layout_marginEnd="@dimen/login_registration_mobile_incorrect_margin_top"
+                                android:gravity="end"
+                                android:text="@string/incorrect_mobile_number_error"
+                                android:textColor="@color/mobile_screen_background"
+                                android:textSize="@dimen/login_registration_mobile_minimum_text_text_size"
+                                android:visibility="gone" />
+                        </RelativeLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/textinput_password"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/textinput_name_marginLeft"
+                            android:layout_marginEnd="@dimen/textinput_name_marginRight"
+                            android:layout_marginBottom="@dimen/textinput_name_marginBottom"
+                            android:textColor="@color/profile_grey"
+                            android:theme="@style/Register_email_hint">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/password_text_userprofile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:hint="@string/password"
+                                android:imeOptions="actionNext"
+                                android:inputType="textVisiblePassword"
+                                android:maxLength="15"
+                                android:maxLines="1"
+                                android:paddingBottom="@dimen/mobile_extra_line_spacing"
+                                android:textColor="@color/profile_white"
+                                android:textSize="@dimen/login_registration_mobile_phone_text_size"
+                                android:theme="@style/Register_email_hint" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/text_input_dob"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/text_input_dob_marginLeft"
+                            android:layout_marginEnd="@dimen/text_input_dob_marginRight"
+                            android:layout_marginBottom="@dimen/text_input_dob_marginBottom"
+                            android:focusableInTouchMode="false"
+                            android:inputType="none"
+                            android:textColor="@color/profile_grey"
+                            android:theme="@style/Register_email_hint">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/dob_userprofile"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusableInTouchMode="false"
+                                android:imeOptions="actionDone"
+                                android:inputType="none"
+                                android:hint="@string/date_of_birth"
+                                android:textColor="@color/profile_white"
+                                android:textSize="@dimen/login_registration_mobile_phone_text_size"
+                                android:theme="@style/Register_email_hint" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <TextView
+                            android:id="@+id/gender_userprofile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/gender_userprofile_marginLeft"
+                            android:layout_marginBottom="@dimen/gender_userprofile_marginBottom"
+                            android:text="@string/gender"
+                            android:textColor="#6e6e6e"
+                            android:textSize="@dimen/userprofile_small_textsize" />
+
+                        <RadioGroup
+                            android:id="@+id/editprofile_radio_group"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginStart="@dimen/radiogrp_marginLeft"
+                            android:layout_marginEnd="@dimen/radiogrp_marginLeft"
+                            android:layout_marginBottom="@dimen/radiogrp_marginBottom"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/editprofile_radio_male"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:button="@drawable/radiobutton_selector"
+                                android:maxLines="1"
+                                android:paddingStart="@dimen/radiobtn_paddingLeft"
+                                android:paddingTop="@dimen/radiobtn_padding"
+                                android:paddingBottom="@dimen/radiobtn_padding"
+                                android:text="@string/male"
+                                android:textColor="@color/profile_grey"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/userprofile_small_textsize" />
+
+                            <RadioButton
+                                android:id="@+id/editprofile_radio_female"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="@dimen/radiobtn_marginLeft"
+                                android:button="@drawable/radiobutton_selector"
+                                android:maxLines="1"
+                                android:paddingStart="@dimen/radiobtn_paddingLeft"
+                                android:paddingTop="@dimen/radiobtn_padding"
+                                android:paddingBottom="@dimen/radiobtn_padding"
+                                android:text="@string/female"
+                                android:textColor="@color/profile_grey"
+                                android:textAlignment="center"
+                                android:textSize="@dimen/userprofile_small_textsize" />
+                        </RadioGroup>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="0.5dp"
+                            android:layout_marginStart="@dimen/text_input_dob_marginLeft"
+                            android:layout_marginEnd="@dimen/text_input_dob_marginRight"
+                            android:layout_marginBottom="@dimen/text_input_dob_marginBottom"
+                            android:background="@color/profile_white" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/text_input_dob_marginLeft"
+                            android:layout_marginEnd="@dimen/text_input_dob_marginRight"
+                            android:layout_marginBottom="@dimen/text_input_dob_marginBottom"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_gravity="center_vertical"
+                                android:contentDescription="@string/app_name"
+                                app:srcCompat="@drawable/ic_premium" />
+
+                            <View
+                                android:layout_width="0.4dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginEnd="8dp"
+                                android:layout_marginStart="5dp"
+                                android:background="@drawable/login_line" />
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/edt_premium"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:background="@drawable/edittext_background"
+                                android:hint="@string/subcription"
+                                android:inputType="text"
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textColor="@color/profile_white"
+                                android:textColorHint="@color/profile_white"
+                                android:textCursorDrawable="@drawable/cursor_white"
+                                android:textSize="@dimen/login_registration_mobile_phone_text_size"
+                                android:theme="@style/Register_email_hint"
+                                android:enabled="false" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/cnge_pwd_userprofile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/changePwd_left"
+                            android:layout_marginBottom="@dimen/changePwd_bottom"
+                            android:text="@string/change_password"
+                            android:textColor="@color/profile_pink"
+                            android:textSize="@dimen/changepwd_text_size"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/save_changes_userprofile"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/save_changes_height"
+            android:layout_alignParentBottom="true"
+            android:background="@color/profile_pink"
+            android:gravity="center"
+            android:text="@string/save_changes_caps"
+            android:textAlignment="center"
+            android:textSize="@dimen/savechanges_textsize"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+</RelativeLayout>

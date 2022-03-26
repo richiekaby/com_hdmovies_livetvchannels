@@ -1,0 +1,178 @@
+<resources>
+    <string name="app_name">Prime Video Flix App</string>
+    <string name="drawer_open">Drawer Open</string>
+    <string name="drawer_close">Drawer Close</string>
+
+    <string name="tag_line">Flix Premium video App</string>
+
+    <string name="facebook_app_id">269591434394667</string>
+    <string name="fb_login_protocol_scheme">fb269591434394667</string>
+
+    <!--Drawer Menu -->
+    <string name="menu_home">Home</string>
+    <string name="menu_latest">New On Flix</string>
+    <string name="menu_category">Category</string>
+    <string name="menu_favorite">Favorites</string>
+    <string name="menu_download">Downloads</string>
+    <string name="menu_share">Share App</string>
+    <string name="menu_rate">Rate App</string>
+    <string name="menu_more">More App</string>
+    <string name="menu_about">About Us</string>
+    <string name="menu_privacy">Privacy Policy</string>
+    <string name="menu_profile">Profile</string>
+    <string name="menu_giftvoucher">Redeem Gift Vouchers</string>
+    <string name="menu_earn">Refer &amp; Earn</string>
+    <string name="menu_login">Login</string>
+    <string name="menu_logout">Logout</string>
+    <string name="menu_video">Video</string>
+    <string name="menu_setting">Settings</string>
+
+    <!-- home title -->
+    <string name="latest_video">New On Flix</string>
+    <string name="all_video">All Videos</string>
+    <string name="recent_video">Recent Videos</string>
+    <string name="latest_category">Category</string>
+    <string name="more_btn">See All</string>
+    <string name="total_video">Videos</string>
+    <string name="total_category">Categories</string>
+
+    <string name="description_title">Description :-</string>
+    <string name="related_video">Similar Videos</string>
+    <string name="comment_video">Comment</string>
+    <string name="comment_view_all">See All</string>
+    <string name="comment_view_no">No comment found !!</string>
+    <string name="leave_comment">Leave comment</string>
+    <string name="loading">Loading...</string>
+    <string name="logout_msg">Are you sure you want logout ?</string>
+    <string name="login_require">Please Login First...</string>
+    <string name="search_title">Search</string>
+    <string name="notification">Notifications</string>
+    <string name="no_search">No search found !!</string>
+    <string name="notification_title">Enable Push Notification</string>
+
+    <string name="no_data">No video found.</string>
+    <string name="favourite_add">Favourite has been saved</string>
+    <string name="favourite_remove">Favourite has been removed</string>
+    <string name="pop_favourite_add">Add to favorite</string>
+    <string name="pop_favourite_remove">Removed from favorite</string>
+    <string name="no_video">No video found !!</string>
+    <string name="no_cat">No Category found !!</string>
+    <string name="no_fav">No favorite found !!</string>
+    <string name="share_msg">Download it from Google Play Store Free Here \n https://play.google.com/store/apps/details?id=</string>
+
+    <!-- more application for play store -->
+    <string name="play_more_apps">https://play.google.com/store/apps/developer?id=Android+Apps</string>
+
+    <!-- about us -->
+    <string name="version">Version</string>
+    <string name="company">Company</string>
+    <string name="email">Email</string>
+    <string name="website">Website</string>
+    <string name="contact">Contact</string>
+    <string name="about">About</string>
+
+    <string name="login_email">Email</string>
+    <string name="login_password">Password</string>
+    <string name="login_remember">Remember Me</string>
+    <string name="login">Login</string>
+    <string name="login_skip">Skip</string>
+    <string name="login_register">Register</string>
+    <string name="login_update">Update</string>
+    <string name="forgot_submit">Submit</string>
+    <string name="forgot_title">Forgot Password</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="dont_account">Don"&apos;"t have an account ?</string>
+    <string name="login_signup">Signup</string>
+    <string name="sign_up_name">Name</string>
+    <string name="sign_up_phone">Phone</string>
+    <string name="already_account_sign_in">Already have an account Yet?</string>
+    <string name="your_profile_update">Your Profile Updated</string>
+    <string name="error_title">Opps.</string>
+    <string name="error_login_failed">Admin disable your login rights</string>
+    <string name="comment_require">Comment require..</string>
+    <string name="pip_mode">PIP Mode</string>
+    <string name="pip_not_support">Your device PIP mode not support require oreo(8.0) version</string>
+
+    <!-- youtube -->
+    <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
+    <string name="youtube_api_key">AIzaSyAYJwy6nzCFqgr5LtihRI3YuVBb_34aprw</string>
+
+    <!--if you want rtl change value of isRTL to true else false-->
+    <string name="isRTL">false</string>
+
+    <string name="exit_msg">Are You Sure You Want To Close App?</string>
+    <string name="exit_yes">Yes</string>
+    <string name="exit_no">No</string>
+    <string name="subcription">Premium Plans</string>
+    <string name="giftvoucher">Redeem Gift Vouchers</string>
+    <string name="referandearn">Refer &amp; Earn</string>
+    <string name="plantitle">Exclusive Shows,\nWatch All Premium Content,\nUnlimited Entertainment</string>
+    <string name="payment">Payment</string>
+    <string name="login_gg_text">Login With Google</string>
+
+    <string name="shareSub">share</string>
+    <string name="downloadfolder">primevideoflix</string>
+
+    <array name="colors_load">
+        <item>@color/pinkPrimary</item>
+        <item>@color/white</item>
+    </array>
+
+    <!--Advance webview-->
+    <string name="global_network_offline">No Internet connection available</string>
+
+    <string name="placeholder_empty">Not found</string>
+    <string name="placeholder_offline">No Internet connection available</string>
+    <string name="skip"><u>Skip</u></string>
+
+    <!--New login-->
+    <string name="register">Register</string>
+    <string name="country">Country</string>
+    <string name="mobile">Mobile</string>
+    <string name="incorrect_mobile_number_error">Incorrect Mobile Number</string>
+    <string name="international_email">E-mail</string>
+    <string name="incorrect_email_error">Incorrect Email ID</string>
+    <string name="existing_user_eith_login">Existing User - Login</string>
+    <string name="login_with">Login with</string>
+    <string name="skip_and_explore">Skip &amp; Explore</string>
+    <string name="to_subscribe_please_login">To subscribe, please login</string>
+    <string name="connect_social">Connect via Social Accounts</string>
+    <string name="register_mobile">Register via Mobile Number</string>
+    <string name="login_mobile">Login via Mobile Number</string>
+    <string name="skip_caps">SKIP</string>
+    <string name="already_account">Already have an account?</string>
+    <string name="register_email">Register via Email ID</string>
+    <string name="login_via_email">Login via Email ID</string>
+    <string name="orletter">Or</string>
+    <string name="privacy_info">By continuing, you agree to our Terms &amp; Privacy Policy</string>
+    <string name="login_small">Login</string>
+    <string name="enterreferralpromo">Enter Referral Promo Code : </string>
+    <string name="mobile_num">Mobile Number</string>
+    <string name="emailid">Email ID</string>
+    <string name="forgot_password_hint">Forgot Password?</string>
+    <string name="astreik">*</string>
+    <string name="gdpr_third_text">I am above 18 years</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="gdpr_second_text">I allow Flix to use my data for profiling, analytics and provide personalised recommendations</string>
+    <string name="gdpr_fourth_text">I want to receive special offers and other marketing related information via Email or SMS</string>
+    <string name="password">Password</string>
+    <string name="edit_prof">Edit Profile</string>
+    <string name="email_id">Email ID</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="change_password">Change Password</string>
+    <string name="save_changes_caps">SAVE CHANGES</string>
+    <string name="name">Name</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="step_1_of_2">Step 1 of 2</string>
+    <string name="forgot_pw_enter_email">Please enter your registered Email ID to reset your password.</string>
+    <string name="send_link">SEND LINK</string>
+
+    <string name="p1080">1080p</string>
+    <string name="p720">720p</string>
+    <string name="p480">480p</string>
+    <string name="p360">360p</string>
+    <string name="p240">240p</string>
+</resources>

@@ -1,0 +1,460 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:jwp="http://schemas.android.com/apk/lib/com.longtailvideo.jwplayer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/mobile_screen_background"
+    android:filterTouchesWhenObscured="true"
+    android:fitsSystemWindows="true"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:isScrollContainer="true"
+    android:scaleType="fitXY">
+
+    <Button
+        android:id="@+id/mobile_action_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/registration_login_highlighted_text"
+        android:textSize="@dimen/login_registration_mobile_bottom_login_text_size"
+        android:textColor="@color/white"/>
+
+    <ScrollView
+        android:id="@+id/login_registration_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/mobile_action_button"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:isScrollContainer="true"
+            android:paddingBottom="@dimen/login_scroll_view_bootom_padding">
+
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@layout/email_heading"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/login_registration_mobile_padding_top"
+                android:paddingBottom="@dimen/login_registration_mobile_padding_bottom"
+                android:textAlignment="viewStart">
+
+                <ImageView
+                    android:id="@+id/back_icon"
+                    android:layout_width="@dimen/login_registration_email_back_icon_width"
+                    android:layout_height="@dimen/login_registration_email_back_icon_height"
+                    android:layout_marginStart="@dimen/login_registration_email_back_icon_margin_left"
+                    android:layout_marginTop="@dimen/login_registration_email_back_icon_margin_top"
+                    android:clickable="true"
+                    android:gravity="right|center_vertical|center_horizontal|center|end"
+                    android:src="@drawable/back_button_icon" />
+
+                <TextView
+                    android:id="@+id/login_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/login_registration_mobile_heading_margin_left"
+                    android:layout_marginTop="@dimen/login_registration_mobile_heading_margin_top"
+                    android:gravity="left|center_vertical|center_horizontal|center|start"
+                    android:textSize="@dimen/login_registration_mobile_heading_text_size"
+                    android:textColor="@color/registration_login_default_text"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_country_text_fields"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/login_registration_mobile_country_margin_top">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/input_country"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/login_registration_mobile_country_margin_left"
+                        android:layout_marginEnd="@dimen/login_registration_mobile_country_margin_right"
+                        android:lineSpacingExtra="@dimen/country_extra_line_spacing"
+                        android:visibility="gone">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_country_inner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusableInTouchMode="false"
+                            android:inputType="none"
+                            android:theme="@style/Register_email_hint">
+
+                            <EditText
+                                android:id="@+id/input_country_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:focusableInTouchMode="false"
+                                android:hint="@string/country"
+                                android:inputType="none"
+                                android:isScrollContainer="true"
+                                android:paddingTop="@dimen/login_registration_mobile_country_dropdown_floating_hint_margin"
+                                android:paddingBottom="@dimen/country_extra_line_spacing"
+                                android:text=" "
+                                android:textAlignment="viewStart"
+                                android:textColor="@color/registration_login_edit_text"
+                                android:textDirection="locale"
+                                android:textSize="@dimen/login_registration_mobile_country_text_size"
+                                android:theme="@style/Register_email_hint" />
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <ImageView
+                            android:id="@+id/input_country_dropdown"
+                            android:layout_width="@dimen/login_registration_mobile_country_dropdown_width"
+                            android:layout_height="@dimen/login_registration_mobile_country_dropdown_height"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginTop="@dimen/login_registration_mobile_country_dropdown_margin_top"
+                            android:layout_marginEnd="-6dp"
+                            android:gravity="end"
+                            android:padding="10dp"
+                            android:src="@drawable/ic_dropdown" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/login_registration_mobile_country_margin_left"
+                        android:layout_marginTop="@dimen/login_registration_mobile_phone_margin_top"
+                        android:layout_marginEnd="@dimen/login_registration_mobile_country_margin_right"
+                        android:lineSpacingExtra="@dimen/country_extra_line_spacing">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.google.android.material.textfield.TextInputLayout
+                                android:id="@+id/input_phone"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:theme="@style/TextInputLayoutLabel">
+
+                                <com.google.android.material.textfield.TextInputEditText
+                                    android:id="@+id/input_phone_text"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="@string/emailid"
+                                    android:inputType="textEmailAddress"
+                                    android:textAlignment="viewStart"
+                                    android:textSize="@dimen/login_registration_mobile_country_text_size"
+                                    android:textColor="@color/white"/>
+                            </com.google.android.material.textfield.TextInputLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/login_registration_mobile_country_margin_left"
+                        android:layout_marginTop="@dimen/login_registration_mobile_phone_margin_top"
+                        android:layout_marginEnd="@dimen/login_registration_mobile_country_margin_right"
+                        android:lineSpacingExtra="@dimen/country_extra_line_spacing">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_layout_outer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/TextInputLayoutLabel"
+                            app:passwordToggleEnabled="true"
+                            app:passwordToggleTint="@color/colorPrimary">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/input_password_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/password"
+                                android:inputType="textPassword"
+                                android:maxLength="20"
+                                android:textAlignment="viewStart"
+                                android:textSize="@dimen/login_registration_mobile_country_text_size"
+                                android:textColor="@color/white"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/promocode_ly"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/login_registration_mobile_country_margin_left"
+                        android:layout_marginTop="@dimen/login_registration_mobile_phone_margin_top"
+                        android:layout_marginEnd="@dimen/login_registration_mobile_country_margin_right"
+                        android:lineSpacingExtra="@dimen/country_extra_line_spacing">
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/input_layout_outer_promo_code"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:theme="@style/TextInputLayoutLabel"
+                            app:passwordToggleEnabled="true"
+                            app:passwordToggleTint="@color/colorPrimary">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/input_promo_code_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Promo Code(optional)"
+                                android:inputType="text"
+                                android:maxLength="20"
+                                android:textAlignment="viewStart"
+                                android:textSize="@dimen/login_registration_mobile_country_text_size"
+                                android:textColor="@color/white"/>
+                        </com.google.android.material.textfield.TextInputLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/forgot_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_country_text_fields"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/login_registration_mobile_forgot_text_margin_top"
+                android:clickable="true"
+                android:gravity="center"
+                android:isScrollContainer="true"
+                android:padding="@dimen/generic_touch_padding"
+                android:text="@string/forgot_password_hint"
+                android:textColor="@color/registration_login_highlighted_text"
+                android:textSize="@dimen/login_registration_mobile_forgot_text_text_size"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:id="@+id/gdpr_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/layout_country_text_fields"
+                android:layout_marginTop="25dp">
+
+                <RelativeLayout
+                    android:id="@+id/check_box_layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/login_registration_email_password_margin_left"
+                        android:layout_marginTop="@dimen/login_registration_mobile_password_margin_top"
+                        android:layout_marginEnd="@dimen/login_registration_email_password_margin_right"
+                        android:fitsSystemWindows="true"
+                        android:isScrollContainer="true">
+
+                        <CheckBox
+                            android:id="@+id/checkbox1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:button="@drawable/filter_checkbox_selector"
+                            android:focusable="false"
+                            android:textColor="@color/filter_mob_selected_text_color"
+                            android:textSize="@dimen/rightfragment_options_textsize" />
+
+                        <TextView
+                            android:id="@+id/asterisk_for_check_box_layout1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_toEndOf="@+id/checkbox1"
+                            android:text="@string/astreik"
+                            android:textColor="@color/contact_us_highlighted_text"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/privacy_and_terms"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_toEndOf="@+id/checkbox1"
+                            android:textColor="@color/filter_filter_text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/check_box_layout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/check_box_layout1"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/login_registration_email_password_margin_left"
+                        android:layout_marginTop="@dimen/login_registration_mobile_password_margin_top"
+                        android:layout_marginEnd="@dimen/login_registration_email_password_margin_right"
+                        android:fitsSystemWindows="true"
+                        android:isScrollContainer="true">
+
+                        <CheckBox
+                            android:id="@+id/checkbox2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:button="@drawable/filter_checkbox_selector"
+                            android:focusable="false"
+                            android:textColor="@color/filter_mob_selected_text_color"
+                            android:textSize="@dimen/rightfragment_options_textsize" />
+
+                        <TextView
+                            android:id="@+id/asterisk_for_check_box_layout2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_toEndOf="@+id/checkbox2"
+                            android:text="@string/astreik"
+                            android:textColor="@color/contact_us_highlighted_text"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_toEndOf="@+id/checkbox2"
+                            android:text="@string/gdpr_second_text"
+                            android:textColor="@color/filter_filter_text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/check_box_layout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/check_box_layout2"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/login_registration_email_password_margin_left"
+                        android:layout_marginTop="@dimen/login_registration_mobile_password_margin_top"
+                        android:layout_marginEnd="@dimen/login_registration_email_password_margin_right"
+                        android:fitsSystemWindows="true"
+                        android:isScrollContainer="true">
+
+                        <CheckBox
+                            android:id="@+id/checkbox3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:button="@drawable/filter_checkbox_selector"
+                            android:focusable="false"
+                            android:textColor="@color/filter_mob_selected_text_color"
+                            android:textDirection="ltr"
+                            android:textSize="@dimen/rightfragment_options_textsize" />
+
+                        <TextView
+                            android:id="@+id/asterisk_for_check_box_layout3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_toEndOf="@+id/checkbox3"
+                            android:text="@string/astreik"
+                            android:textColor="@color/contact_us_highlighted_text"
+                            android:textSize="@dimen/contact_us_description_txt_view_txt_size"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/gdpr_age_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_toEndOf="@+id/checkbox3"
+                            android:text="@string/gdpr_third_text"
+                            android:textColor="@color/filter_filter_text_color" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/radio_button_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/check_box_layout3"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/receive_sms_or_email_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/login_registration_email_password_margin_left"
+                        android:layout_marginTop="@dimen/login_registration_mobile_password_margin_top"
+                        android:layout_marginEnd="@dimen/login_registration_email_password_margin_right"
+                        android:layout_marginBottom="40dp"
+                        android:fitsSystemWindows="true"
+                        android:isScrollContainer="true">
+
+                        <TextView
+                            android:id="@+id/asterisk_for_radio_button_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:text="@string/astreik"
+                            android:textColor="@color/contact_us_highlighted_text"
+                            android:textSize="@dimen/contact_us_description_txt_view_txt_size"
+                            android:visibility="gone" />
+
+                        <TextView
+                            android:id="@+id/receive_sms_or_email_text_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_toEndOf="@+id/asterisk_for_radio_button_layout"
+                            android:text="@string/gdpr_fourth_text"
+                            android:textColor="@color/filter_filter_text_color" />
+
+                        <RadioGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/receive_sms_or_email_text_view"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/radio_button_yes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="start"
+                                android:layout_marginStart="5dp"
+                                android:button="@drawable/radiobutton_selector"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="0dp"
+                                android:text="@string/yes"
+                                android:textColor="@color/filter_mob_selected_text_color"
+                                android:textSize="@dimen/language_screen_checkbox_text_size" />
+
+                            <RadioButton
+                                android:id="@+id/radio_button_no"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="70dp"
+                                android:button="@drawable/radiobutton_selector"
+                                android:paddingStart="10dp"
+                                android:paddingEnd="0dp"
+                                android:text="@string/no"
+                                android:textColor="@color/filter_mob_selected_text_color"
+                                android:textSize="@dimen/language_screen_checkbox_text_size" />
+                        </RadioGroup>
+                    </RelativeLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <include layout="@layout/mobile_progress_bar" />
+</RelativeLayout>

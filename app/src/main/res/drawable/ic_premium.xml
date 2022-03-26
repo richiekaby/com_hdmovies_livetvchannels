@@ -1,0 +1,16 @@
+<vector android:autoMirrored="true" android:height="512dp"
+    android:viewportHeight="1058.7528" android:viewportWidth="1058"
+    android:width="512dp" xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:fillColor="#5D5D5D" android:pathData="m229.62,264.88c0,5.13 7.48,10.86 17.48,10.86h559.47c9.99,0 17.47,-5.73 17.47,-10.86v-107.33l-120.89,88.2c-21.87,15.4 -51.41,13.96 -71.68,-3.49l-104.64,-95.44 -104.7,95.49c-20.27,17.47 -49.82,18.91 -71.68,3.5l-120.82,-88.26zM229.62,264.88"/>
+    <path android:fillColor="#5D5D5D" android:pathData="m368.5,496.77 l116.12,-116.13h-253.36zM368.5,496.77"/>
+    <path android:fillColor="#5D5D5D" android:pathData="m526.77,387.95 l-115.09,115.08h229.02zM526.77,387.95"/>
+    <path android:fillColor="#5D5D5D" android:pathData="m730.34,503.02h283.59c-1.31,-2.28 -3.09,-4.26 -5.25,-5.78l-146.66,-105.65zM730.34,503.02"/>
+    <path android:fillColor="#5D5D5D" android:pathData="m820.84,380.64h-252.1l114.93,116.07zM820.84,380.64"/>
+    <path android:fillColor="#5D5D5D" android:pathData="m554.78,1023.56 l444.26,-485.57h-303.3zM554.78,1023.56"/>
+    <path android:fillColor="#5D5D5D" android:pathData="m392.77,537.99 l133.29,459.11 133.27,-459.11zM392.77,537.99"/>
+    <path android:fillColor="#5D5D5D" android:pathData="m54.61,537.99 l441.99,483.09 -140.24,-483.09zM54.61,537.99"/>
+    <path android:fillColor="#5D5D5D" android:pathData="m190.77,392.18 l-145.83,105.06c-2.15,1.52 -3.94,3.5 -5.25,5.78h282.06zM190.77,392.18"/>
+    <path android:fillColor="#5D5D5D" android:pathData="m264.58,83.43c0,28.96 -23.48,52.45 -52.45,52.45s-52.45,-23.48 -52.45,-52.45 23.48,-52.45 52.45,-52.45 52.45,23.49 52.45,52.45zM264.58,83.43"/>
+    <path android:fillColor="#5D5D5D" android:pathData="m579.27,83.43c0,28.96 -23.48,52.45 -52.45,52.45 -28.97,0 -52.45,-23.48 -52.45,-52.45s23.47,-52.45 52.45,-52.45c28.96,0 52.45,23.49 52.45,52.45zM579.27,83.43"/>
+    <path android:fillColor="#5D5D5D" android:pathData="m893.96,83.43c0,28.96 -23.48,52.45 -52.44,52.45 -28.97,0 -52.45,-23.48 -52.45,-52.45s23.48,-52.45 52.45,-52.45c28.96,0 52.44,23.49 52.44,52.45zM893.96,83.43"/>
+</vector>
